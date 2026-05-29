@@ -2,7 +2,6 @@
 session_start();
 $db=new PDO('mysql:host=127.0.0.1;dbname=uatm_gasa','root','');
  
-// TEMPORAIRE : pour tester sans passer par login.php (supprimer en production)
 if(!isset($_SESSION['user'])){
 	$_SESSION['user']=['id'=>1,'nom'=>'Jean DUPONT','role'=>'Étudiant'];
 }
@@ -41,7 +40,6 @@ if(isset($_POST['btn']) && $_POST['btn']=='upload'){
 	}
 }
  
-// Notifications (mettre 0 si la table n'existe pas encore)
 $notifs=0;
 try{
 	$req=$db->prepare('SELECT COUNT(*) FROM notifications WHERE utilisateur_id=? AND lu=0');
@@ -63,7 +61,6 @@ $filieres=['Licence Informatique','Master Informatique','Licence Gestion','Maste
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#0d3b9e;--dark:#0a2a6e;--light:#1a4fc4;--bg:#f4f6fb;--white:#fff;--border:#dde2ee;--text:#1a1a2e;--muted:#6b7280;}
 body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;}
-/* SIDEBAR */
 .sidebar{width:260px;background:var(--white);border-right:1px solid var(--border);display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100;}
 .brand{background:linear-gradient(135deg,var(--dark),var(--light));padding:10px 16px;display:flex;align-items:center;gap:10px;color:#fff;min-height:64px;}
 .brand img{width:44px;height:44px;object-fit:contain;flex-shrink:0;}
@@ -77,7 +74,6 @@ body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--tex
 .ico{width:20px;text-align:center;font-size:17px;flex-shrink:0;}
 .badge{margin-left:auto;background:#e53e3e;color:#fff;font-size:11px;font-weight:700;padding:1px 7px;border-radius:20px;}
 .sbot{padding:16px 0;border-top:1px solid var(--border);}
-/* MAIN */
 .main{margin-left:260px;flex:1;display:flex;flex-direction:column;min-height:100vh;}
 .topbar{height:64px;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 28px;gap:16px;position:sticky;top:0;z-index:50;}
 .topbar .title{font-size:19px;font-weight:600;color:var(--text);flex:1;}
@@ -88,7 +84,6 @@ body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--tex
 .uav{width:36px;height:36px;background:var(--bg);border:1.5px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;}
 .uname{font-size:13.5px;font-weight:600;color:var(--text);}
 .urole{font-size:12px;color:var(--navy);}
-/* CONTENT */
 .content{padding:32px 36px;flex:1;}
 .ptitle{font-size:24px;font-weight:700;color:var(--text);margin-bottom:24px;}
 .card{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;}
