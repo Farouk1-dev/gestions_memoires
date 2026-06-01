@@ -1,0 +1,706 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+
+    overflow:hidden;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    display:flex;
+
+    width:100%;
+    height:100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+    width:300px;
+    min-width:300px;
+    height:100vh;
+
+    background:#fff;
+
+    border-right:1px solid #e5e7eb;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    overflow:hidden;
+
+    z-index:1000;
+}
+
+/* ================= LOGO ================= */
+
+.logo-box{
+    background:#003caa;
+
+    height:115px;
+
+    padding:18px;
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    flex-shrink:0;
+}
+
+.logo{
+    width:72px;
+    flex-shrink:0;
+}
+
+.logo-box h2{
+    color:white;
+
+    font-size:15px;
+    line-height:22px;
+}
+
+.logo-box p{
+    color:white;
+
+    font-size:13px;
+
+    margin-top:4px;
+
+    white-space:nowrap;
+}
+
+/* ================= MENU ================= */
+
+.menu{
+    list-style:none;
+
+    padding:18px 14px;
+
+    flex:1;
+
+    overflow-y:auto;
+}
+
+.menu li{
+    height:58px;
+
+    border-radius:14px;
+
+    margin-bottom:10px;
+
+    transition:0.3s;
+}
+
+.menu li:hover{
+    background:#eef2ff;
+}
+
+.menu li.active{
+    background:#eef2ff;
+}
+
+/* ================= LINKS ================= */
+
+.menu li a{
+
+    width:100%;
+    height:100%;
+
+    padding:0 18px;
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    text-decoration:none !important;
+
+    color:#111827 !important;
+
+    font-size:15px;
+    font-weight:500;
+}
+
+.menu li.active a{
+    color:#1d4ed8 !important;
+    font-weight:600;
+}
+
+/* ================= ICONS ================= */
+
+.menu li a i{
+    width:22px;
+    font-size:22px;
+}
+
+/* ================= BADGE ================= */
+
+.badge{
+    margin-left:auto;
+
+    background:red;
+    color:white;
+
+    width:24px;
+    height:24px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:12px;
+    font-weight:700;
+}
+
+/* ================= LOGOUT ================= */
+
+.logout{
+    height:85px;
+
+    border-top:1px solid #e5e7eb;
+
+    flex-shrink:0;
+}
+
+.logout a{
+
+    width:100%;
+    height:100%;
+
+    padding:0 25px;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    text-decoration:none !important;
+
+    color:#111827 !important;
+
+    font-size:16px;
+    font-weight:600;
+}
+
+/* ================= MAIN ================= */
+
+.main{
+    margin-left:300px;
+    width:calc(100% - 300px);
+
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+}
+
+/* ================= HEADER ================= */
+
+.topbar{
+    height:95px;
+
+    background:white;
+
+    padding:0 30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    border-bottom:1px solid #e5e7eb;
+
+    position:sticky;
+    top:0;
+
+    z-index:999;
+
+    flex-shrink:0;
+}
+
+/* ================= LEFT ================= */
+
+.top-left{
+    display:flex;
+    align-items:center;
+    gap:24px;
+}
+
+.menu-icon{
+    font-size:34px;
+
+    cursor:pointer;
+
+    color:#0f172a;
+}
+
+.top-left h1{
+    font-size:24px;
+    color:#0f172a;
+}
+
+/* ================= RIGHT ================= */
+
+.top-right{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+/* ================= NOTIFICATION ================= */
+
+.notif{
+    position:relative;
+}
+
+.notif i{
+    font-size:32px;
+
+    cursor:pointer;
+
+    color:#0f172a;
+}
+
+.notif span{
+    position:absolute;
+
+    top:-10px;
+    right:-10px;
+
+    background:red;
+    color:white;
+
+    width:24px;
+    height:24px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* ================= PROFILE ================= */
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.profile img{
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+}
+
+.profile h3{
+    font-size:18px;
+    color:#111827;
+}
+
+.profile p{
+    color:#2563eb;
+    margin-top:3px;
+}
+
+/* ================= CONTENT ================= */
+
+.content{
+    flex:1;
+
+    padding:34px;
+
+    overflow-y:auto;
+}
+
+/* ================= TITLES ================= */
+
+.page-title{
+    font-size:22px;
+    color:#0f172a;
+
+    margin-bottom:10px;
+}
+
+.page-description{
+    color:#475569;
+
+    margin-bottom:26px;
+
+    line-height:1.6;
+}
+
+/* ================= UPLOAD BOX ================= */
+
+.upload-box{
+    background:white;
+
+    border:2px dashed #bcd0ff;
+    border-radius:18px;
+
+    padding:55px 20px;
+
+    text-align:center;
+
+    margin-bottom:34px;
+}
+
+.upload-box i{
+    font-size:56px;
+    color:#2563eb;
+
+    margin-bottom:20px;
+}
+
+.upload-box h3{
+    font-size:28px;
+    color:#0f172a;
+
+    margin-bottom:12px;
+}
+
+.upload-box p{
+    color:#64748b;
+
+    margin-bottom:20px;
+}
+
+.upload-box button{
+    background:#2563eb;
+    color:white;
+
+    border:none;
+    border-radius:12px;
+
+    padding:14px 28px;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.upload-box button:hover{
+    transform:scale(1.03);
+}
+
+.upload-box button i{
+    font-size:16px;
+
+    margin-right:10px;
+
+    margin-bottom:0;
+}
+
+/* ================= INFO ================= */
+
+.upload-info{
+    margin-top:22px;
+
+    color:#64748b;
+    font-size:15px;
+}
+
+.upload-info span{
+    color:#2563eb;
+    font-weight:600;
+}
+
+/* ================= SECTION ================= */
+
+.section-title{
+    font-size:24px;
+    color:#0f172a;
+
+    margin-bottom:20px;
+}
+
+/* ================= TABLE ================= */
+
+.table-box{
+    background:white;
+
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+
+    overflow:hidden;
+
+    margin-bottom:28px;
+}
+
+/* ================= TABLE HEAD ================= */
+
+.table-head{
+    background:#f8fafc;
+
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    padding:18px 22px;
+
+    font-weight:600;
+    color:#0f172a;
+}
+
+/* ================= FILE ITEM ================= */
+
+.file-item{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    align-items:center;
+
+    padding:22px;
+
+    border-top:1px solid #e5e7eb;
+}
+
+/* ================= FILE ================= */
+
+.file-info{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.pdf-icon{
+    width:56px;
+    height:56px;
+
+    border-radius:14px;
+    background:#fee2e2;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+}
+
+.pdf-icon i{
+    color:#dc2626;
+    font-size:28px;
+}
+
+.file-info h4{
+    font-size:16px;
+    color:#0f172a;
+
+    margin-bottom:6px;
+}
+
+.file-info p{
+    color:#64748b;
+    font-size:14px;
+}
+
+/* ================= SIZE ================= */
+
+.file-size{
+    font-size:15px;
+    color:#334155;
+}
+
+/* ================= STATUS ================= */
+
+.status{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-weight:600;
+}
+
+.ready{
+    color:#16a34a;
+}
+
+/* ================= DELETE ================= */
+
+.delete-btn{
+    width:48px;
+    height:48px;
+
+    border:1px solid #fecaca;
+    background:white;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.delete-btn:hover{
+    background:#fff5f5;
+}
+
+.delete-btn i{
+    color:#ef4444;
+    font-size:18px;
+}
+
+/* ================= INFO CARD ================= */
+
+.info-card{
+    background:#eff6ff;
+
+    border:1px solid #bfdbfe;
+    border-radius:16px;
+
+    padding:22px;
+
+    display:flex;
+    align-items:flex-start;
+    gap:16px;
+
+    margin-bottom:28px;
+}
+
+.info-card i{
+    font-size:28px;
+    color:#2563eb;
+}
+
+.info-card h4{
+    color:#0f172a;
+
+    margin-bottom:6px;
+}
+
+.info-card p{
+    color:#475569;
+
+    line-height:1.6;
+}
+
+/* ================= ACTIONS ================= */
+
+.actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:18px;
+}
+
+/* ================= BUTTONS ================= */
+
+.cancel-btn{
+    background:white;
+    color:#1d4ed8;
+
+    border:2px solid #1d4ed8;
+    border-radius:12px;
+
+    padding:14px 30px;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+.upload-btn{
+    background:#1d4ed8;
+    color:white;
+
+    border:none;
+    border-radius:12px;
+
+    padding:14px 30px;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.upload-btn:hover{
+    transform:scale(1.03);
+}
+
+.upload-btn i{
+    margin-right:10px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+    .sidebar{
+        width:270px;
+        min-width:270px;
+    }
+
+    .main{
+        margin-left:270px;
+        width:calc(100% - 270px);
+    }
+}
+
+@media(max-width:992px){
+
+    body{
+        overflow:auto;
+    }
+
+    .sidebar{
+        width:240px;
+        min-width:240px;
+    }
+
+    .main{
+        margin-left:240px;
+        width:calc(100% - 240px);
+    }
+
+    .content{
+        padding:20px;
+    }
+
+    .table-box{
+        overflow-x:auto;
+    }
+
+    .table-head,
+    .file-item{
+        min-width:900px;
+    }
+
+    .actions{
+        flex-direction:column;
+    }
+
+    .cancel-btn,
+    .upload-btn{
+        width:100%;
+    }
+}

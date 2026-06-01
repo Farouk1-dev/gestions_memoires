@@ -1,0 +1,558 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    overflow:hidden;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    display:flex;
+    width:100%;
+    height:100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+    width:280px;
+    height:100vh;
+
+    background:white;
+
+    border-right:1px solid #e5e7eb;
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    overflow-y:auto;
+
+    z-index:1000;
+}
+
+/* SCROLL SIDEBAR */
+
+.sidebar::-webkit-scrollbar{
+    width:6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+    background:#dbe2ea;
+    border-radius:10px;
+}
+
+.main{
+
+    margin-left:280px;
+
+    width:calc(100% - 280px);
+
+}
+
+/* ================= LOGO ================= */
+
+.logo-box{
+    background:#003fa3;
+
+    height:110px;
+
+    padding:18px;
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    flex-shrink:0;
+}
+
+.logo{
+    width:58px;
+    flex-shrink:0;
+}
+
+.logo-box h2{
+    color:white;
+    font-size:16px;
+    line-height:1.2;
+    font-weight:700;
+}
+
+.logo-box p{
+    color:white;
+    font-size:13px;
+    margin-top:3px;
+    white-space:nowrap;
+}
+
+/* ================= MENU ================= */
+
+.menu{
+    list-style:none;
+
+    padding:20px 15px;
+
+    flex:1;
+}
+
+.menu li{
+    height:58px;
+
+    border-radius:14px;
+
+    margin-bottom:10px;
+
+    transition:0.3s;
+}
+
+.menu li:hover{
+    background:#f8fafc;
+}
+
+.menu li.active{
+    background:#eef4ff;
+}
+
+/* ================= LIENS ================= */
+
+.menu li a{
+
+    width:100%;
+    height:100%;
+
+    padding:0 18px;
+
+    display:flex;
+    align-items:center;
+    gap:16px;
+
+    text-decoration:none !important;
+
+    color:#0f172a !important;
+
+    font-size:17px;
+    font-weight:500;
+}
+
+.menu li.active a{
+    color:#0047cc !important;
+    font-weight:700;
+}
+
+/* ================= ICONES ================= */
+
+.menu li a i{
+    width:22px;
+    font-size:20px;
+}
+
+/* ================= BADGE ================= */
+
+.badge{
+    margin-left:auto;
+
+    width:28px;
+    height:28px;
+
+    border-radius:50%;
+
+    background:#ff0000;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:13px;
+    font-weight:700;
+}
+
+
+
+/* ================= LOGOUT ================= */
+
+.logout{
+    height:80px;
+
+    border-top:1px solid #e5e7eb;
+}
+
+.logout a{
+
+    width:100%;
+    height:100%;
+
+    padding:0 25px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    text-decoration:none !important;
+
+    color:#0f172a !important;
+
+    font-size:18px;
+    font-weight:500;
+}
+
+/* ================= MAIN ================= */
+
+.main{
+    flex:1;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    height:100px;
+
+    background:white;
+
+    border-bottom:1px solid #e5e7eb;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 35px;
+
+    flex-shrink:0;
+}
+
+/* LEFT */
+
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+
+.header-left i{
+    font-size:32px;
+}
+
+.header-left h1{
+    font-size:30px;
+    color:#0f172a;
+}
+
+/* RIGHT */
+
+.profile-box{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.profile{
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.profile-box h3{
+    font-size:16px;
+}
+
+.profile-box p{
+    font-size:14px;
+    color:#64748b;
+}
+
+/* ================= CONTENT ================= */
+
+.content{
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:35px;
+}
+
+/* ================= TITLE ================= */
+
+.welcome{
+    font-size:30px;
+    color:#0f172a;
+
+    margin-bottom:30px;
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+    display:flex;
+    gap:22px;
+
+    margin-bottom:40px;
+}
+
+.card{
+    flex:1;
+
+    height:150px;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    border:1px solid #edf0f5;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+/* CARD TOP */
+
+.card-top{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+/* ICON */
+
+.card .icon{
+    width:62px;
+    height:62px;
+
+    border-radius:18px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:26px;
+
+    flex-shrink:0;
+}
+
+/* TITRE */
+
+.card h3{
+    font-size:16px;
+    font-weight:700;
+}
+
+/* NUMBER */
+
+.card h1{
+    text-align:center;
+
+    font-size:46px;
+    font-weight:800;
+}
+
+/* COLORS */
+
+.blue{
+    background:#eef4ff;
+    color:#0047cc;
+}
+
+.blue .icon{
+    background:#dbe8ff;
+}
+
+.orange{
+    background:#fff7e8;
+    color:#c97a00;
+}
+
+.orange .icon{
+    background:#ffe7b8;
+}
+
+.green{
+    background:#ebfff2;
+    color:#00994d;
+}
+
+.green .icon{
+    background:#d4ffe4;
+}
+
+.red{
+    background:#fff0f0;
+    color:#e60000;
+}
+
+.red .icon{
+    background:#ffdede;
+}
+
+/* ================= RECENTS ================= */
+
+.section-title{
+    font-size:22px;
+    color:#0f172a;
+
+    margin-bottom:22px;
+}
+
+.recent-box{
+    background:white;
+
+    border:1px solid #e5e7eb;
+    border-radius:20px;
+
+    overflow:hidden;
+}
+
+/* ITEM */
+
+.memoire-item{
+    min-height:105px;
+
+    padding:20px 25px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border-bottom:1px solid #edf0f5;
+}
+
+/* LEFT */
+
+.memoire-left{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.memoire-icon{
+    width:58px;
+    height:58px;
+
+    border-radius:14px;
+
+    background:#f4f6fa;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:24px;
+}
+
+/* TEXT */
+
+.memoire-item h3{
+    font-size:17px;
+    margin-bottom:6px;
+
+    color:#0f172a;
+}
+
+.memoire-item p{
+    color:#64748b;
+    font-size:15px;
+}
+
+/* STATUS */
+
+.badge-status{
+    padding:10px 18px;
+
+    border-radius:12px;
+
+    font-size:14px;
+    font-weight:700;
+}
+
+.blue-badge{
+    background:#eef4ff;
+    color:#0047cc;
+}
+
+.orange-badge{
+    background:#fff5df;
+    color:#c97a00;
+}
+
+.gray-badge{
+    background:#eef3ff;
+    color:#0047cc;
+}
+
+/* ================= BUTTON ================= */
+
+.view-all{
+    height:75px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:14px;
+
+    color:#0047cc;
+
+    font-size:21px;
+    font-weight:700;
+}
+
+/* ================= PDF ICONS ================= */
+
+.blue .icon i,
+.memoire-icon i{
+    color:#e53935;
+}
+
+.orange .icon i{
+    color:#d97706;
+}
+
+.green .icon i{
+    color:#16a34a;
+}
+
+.red .icon i{
+    color:#ef4444;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+    body{
+        overflow:auto;
+    }
+
+    .sidebar{
+        width:240px;
+        min-width:240px;
+    }
+
+    .cards{
+        flex-direction:column;
+    }
+
+    .header-left h1{
+        font-size:24px;
+    }
+
+    .welcome{
+        font-size:26px;
+    }
+}

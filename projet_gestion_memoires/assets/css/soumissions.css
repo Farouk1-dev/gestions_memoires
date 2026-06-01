@@ -1,0 +1,723 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    display:flex;
+
+    width:100%;
+    height:100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+    width:295px;
+    min-width:295px;
+    height:100vh;
+
+    background:white;
+
+    border-right:1px solid #e5e7eb;
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    overflow:hidden;
+
+    z-index:1000;
+}
+
+/* ================= LOGO ================= */
+
+.logo-box{
+    background:#003fa3;
+
+    height:120px;
+
+    padding:20px 18px;
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    overflow:hidden;
+
+    flex-shrink:0;
+}
+
+.logo{
+    width:78px;
+    flex-shrink:0;
+}
+
+.logo-text{
+    flex:1;
+}
+
+.logo-box h2{
+    color:white;
+
+    font-size:16px;
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin-bottom:6px;
+}
+
+.logo-box p{
+    color:white;
+
+    font-size:12px;
+
+    white-space:nowrap;
+}
+
+/* ================= MENU ================= */
+
+.menu{
+    list-style:none;
+
+    padding:20px 15px;
+
+    flex:1;
+
+    overflow-y:auto;
+}
+
+.menu li{
+    height:58px;
+
+    border-radius:14px;
+
+    margin-bottom:12px;
+
+    transition:0.3s;
+}
+
+.menu li:hover{
+    background:#f8fafc;
+}
+
+.menu li.active{
+    background:#eef4ff;
+}
+
+/* ================= LINKS ================= */
+
+.menu li a{
+
+    width:100%;
+    height:100%;
+
+    padding:0 18px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    text-decoration:none !important;
+
+    color:#0f172a !important;
+
+    font-size:18px;
+    font-weight:500;
+}
+
+.menu li.active a{
+    color:#0047cc !important;
+    font-weight:600;
+}
+
+/* ================= ICONS ================= */
+
+.menu li a i{
+    width:22px;
+    font-size:20px;
+}
+
+/* ================= LOGOUT ================= */
+
+.logout{
+    height:85px;
+
+    border-top:1px solid #e5e7eb;
+
+    flex-shrink:0;
+}
+
+.logout a{
+
+    width:100%;
+    height:100%;
+
+    padding:0 25px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    text-decoration:none !important;
+
+    color:#0f172a !important;
+
+    font-size:18px;
+    font-weight:500;
+}
+
+/* ================= MAIN ================= */
+
+.main{
+    flex:1;
+
+    margin-left:295px;
+
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    height:105px;
+
+    background:white;
+
+    border-bottom:1px solid #e5e7eb;
+
+    padding:0 35px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:sticky;
+    top:0;
+
+    z-index:999;
+
+    flex-shrink:0;
+}
+
+/* ================= HEADER LEFT ================= */
+
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+
+.header-left i{
+    font-size:32px;
+    color:#0f172a;
+}
+
+.header-left h1{
+    font-size:24px;
+    color:#0f172a;
+
+    margin-bottom:8px;
+}
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.breadcrumb span{
+    color:#0047cc;
+    font-weight:600;
+}
+
+.breadcrumb p{
+    color:#64748b;
+}
+
+/* ================= HEADER RIGHT ================= */
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+/* ================= NOTIFICATION ================= */
+
+.notif{
+    position:relative;
+
+    font-size:30px;
+
+    color:#0f172a;
+}
+
+.notif span{
+    position:absolute;
+
+    top:-8px;
+    right:-10px;
+
+    width:24px;
+    height:24px;
+
+    border-radius:50%;
+
+    background:red;
+    color:white;
+
+    font-size:12px;
+    font-weight:700;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ================= PROFILE ================= */
+
+.profile-box{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.profile-box img{
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+}
+
+.profile-box h3{
+    font-size:18px;
+    color:#0f172a;
+}
+
+.profile-box p{
+    color:#64748b;
+    font-size:15px;
+}
+
+/* ================= CONTENT ================= */
+
+.content{
+    flex:1;
+
+    padding:35px;
+
+    overflow-y:auto;
+}
+
+/* ================= TITLE ================= */
+
+.page-title{
+    font-size:28px;
+
+    margin-bottom:30px;
+
+    color:#0f172a;
+}
+
+/* ================= TABLE ================= */
+
+.table-box{
+    background:white;
+
+    border-radius:20px;
+
+    border:1px solid #e5e7eb;
+
+    overflow:hidden;
+}
+
+table{
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+/* ================= TABLE HEADER ================= */
+
+thead{
+    background:#f8fafc;
+}
+
+th{
+    padding:28px 22px;
+
+    text-align:left;
+
+    font-size:18px;
+    font-weight:700;
+
+    color:#0f172a;
+}
+
+/* ================= TABLE BODY ================= */
+
+td{
+    padding:35px 22px;
+
+    border-top:1px solid #edf0f5;
+
+    font-size:18px;
+
+    color:#0f172a;
+
+    vertical-align:middle;
+}
+
+/* ================= BADGES ================= */
+
+.badge{
+    padding:14px 20px;
+
+    border-radius:14px;
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    font-weight:600;
+
+    font-size:15px;
+}
+
+/* ================= COLORS ================= */
+
+.orange{
+    background:#fff4df;
+    color:#d97706;
+}
+
+.red{
+    background:#ffe7e7;
+    color:#ef4444;
+}
+
+.green{
+    background:#dcfce7;
+    color:#16a34a;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+    .sidebar{
+        width:260px;
+        min-width:260px;
+    }
+
+    .main{
+        margin-left:260px;
+    }
+
+    th,
+    td{
+        font-size:16px;
+    }
+}
+
+@media(max-width:992px){
+
+    body{
+        overflow:auto;
+    }
+
+    .sidebar{
+        width:240px;
+        min-width:240px;
+    }
+
+    .main{
+        margin-left:240px;
+        width:calc(100% - 240px);
+    }
+
+    .header{
+        padding:0 20px;
+    }
+
+    .content{
+        padding:20px;
+    }
+
+    .table-box{
+        overflow-x:auto;
+    }
+
+    table{
+        min-width:900px;
+    }
+}
+
+/* ================= PDF ICON ================= */
+
+.memoire-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.pdf-icon{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:10px;
+
+    background:#fff1f1;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#e53935;
+
+    font-size:22px;
+
+    flex-shrink:0;
+}
+
+/* =====================================
+PAGE HEADER
+===================================== */
+
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.page-title{
+    font-size:38px;
+    color:#0b1b52;
+    margin-bottom:8px;
+}
+
+.page-subtitle{
+    color:#7b8199;
+    font-size:16px;
+}
+
+.total-box{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    background:#1746d1;
+    color:#fff;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    font-size:24px;
+    gap:5px;
+}
+
+/* =====================================
+TABLE
+===================================== */
+
+.table-container{
+    background:#fff;
+    border-radius:24px;
+    overflow:hidden;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.05);
+}
+
+.soumission-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.soumission-table thead{
+    background:#f4f7ff;
+}
+
+.soumission-table th{
+    padding:22px;
+    text-align:left;
+    color:#0b1b52;
+    font-size:16px;
+}
+
+.soumission-table td{
+    padding:22px;
+    border-top:1px solid #edf1f7;
+    vertical-align:middle;
+}
+
+/* =====================================
+MEMOIRE
+===================================== */
+
+.memoire-info{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.pdf-icon{
+    width:55px;
+    height:55px;
+
+    border-radius:16px;
+
+    background:#fff1f1;
+    color:#ef4444;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:24px;
+}
+
+.memoire-info h4{
+    color:#0b1b52;
+    font-size:17px;
+}
+
+/* =====================================
+BADGES
+===================================== */
+
+.user-badge,
+.prof-badge{
+    padding:10px 16px;
+    border-radius:12px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.user-badge{
+    background:#eef3ff;
+    color:#1746d1;
+}
+
+.prof-badge{
+    background:#f0fdf4;
+    color:#16a34a;
+}
+
+/* =====================================
+COMMENTAIRE
+===================================== */
+
+.commentaire{
+    max-width:250px;
+    color:#5c647c;
+    line-height:1.6;
+}
+
+/* =====================================
+DATE
+===================================== */
+
+.date-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#6b7280;
+}
+
+/* =====================================
+STATUS
+===================================== */
+
+.status{
+    padding:10px 16px;
+    border-radius:12px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.status.en_attente{
+    background:#fff7ed;
+    color:#ea580c;
+}
+
+.status.validé{
+    background:#ecfdf5;
+    color:#16a34a;
+}
+
+.status.retourne{
+    background:#fef2f2;
+    color:#dc2626;
+}
+
+/* =====================================
+EMPTY
+===================================== */
+
+.empty-box{
+    padding:60px;
+    text-align:center;
+    color:#6b7280;
+}
+
+.empty-box i{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.main{
+    overflow-y:auto;
+}
+
+.content{
+    width:100%;
+}
+
+.table-box{
+    width:100%;
+    overflow-x:auto;
+}
+
+img{
+    max-width:100%;
+}

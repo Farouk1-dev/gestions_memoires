@@ -1,0 +1,317 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    background:#f5f6fa;
+}
+
+.container{
+    width:100%;
+    height:100vh;
+    display:flex;
+}
+
+/* ================= LEFT ================= */
+
+.left{
+    width:48%;
+    height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,45,120,0.82),
+        rgba(0,45,120,0.82)
+    ),
+    url("../images/bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    width:82%;
+    text-align:center;
+    color:white;
+}
+
+.logo{
+    width:190px;
+    margin-bottom:20px;
+}
+
+.left h1{
+    font-size:44px;
+    white-space: nowrap;
+    font-weight:700;
+    margin-bottom:18px;
+    line-height:1.1;
+}
+
+.line{
+    width:70px;
+    height:4px;
+    background:#f4c542;
+    margin:20px auto;
+    border-radius:10px;
+}
+
+.left h2{
+    font-size:24px;
+    font-weight:300;
+    margin-bottom:35px;
+}
+
+.icon-book{
+    font-size:55px;
+    margin-bottom:30px;
+}
+
+.left p{
+    font-size:19px;
+    line-height:1.8;
+}
+
+/* ================= RIGHT ================= */
+
+.right{
+    width:52%;
+    height:100vh;
+
+    background:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    width:68%;
+}
+
+/* ICON */
+
+.icon-user{
+    margin-bottom:15px;
+}
+
+.icon-user i{
+    font-size:58px;
+    color:#003fa3;
+}
+
+/* TITLE */
+
+.login-box h2{
+    font-size:58px;
+    color:#003fa3;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.login-box p{
+    font-size:18px;
+    color:#6c757d;
+    margin-bottom:40px;
+}
+
+/* INPUTS */
+
+.input-box{
+    margin-bottom:25px;
+}
+
+.input-box label{
+    display:block;
+    font-size:17px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.input{
+    width:100%;
+    height:65px;
+
+    border:2px solid #dfe4ea;
+
+    border-radius:12px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 20px;
+}
+
+.input i{
+    font-size:18px;
+    color:#95a5a6;
+    margin-right:15px;
+}
+
+.input input{
+    width:100%;
+    border:none;
+    outline:none;
+    font-size:17px;
+    background:none;
+}
+
+/* FORGOT */
+
+.forgot{
+    text-align:right;
+    margin-top:5px;
+    margin-bottom:28px;
+}
+
+.forgot a{
+    text-decoration:none;
+    color:#0047cc;
+    font-size:15px;
+}
+
+/* BUTTON */
+
+.btn{
+    width:100%;
+    height:65px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#0047cc;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+.btn i{
+    margin-right:10px;
+}
+
+/* SEPARATOR */
+
+.separator{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    margin:28px 0;
+}
+
+.line-separator{
+    flex:1;
+    height:1px;
+    background:#dcdde1;
+}
+
+.separator span{
+    color:#7f8c8d;
+    font-size:15px;
+}
+
+/* ADMIN BUTTON */
+
+.admin-btn{
+    width:100%;
+    height:62px;
+
+    border:1.5px solid #cfd6df;
+
+    border-radius:12px;
+
+    background:white;
+
+    color:#0047cc;
+
+    font-size:17px;
+
+    cursor:pointer;
+}
+
+.admin-btn i{
+    margin-right:10px;
+}
+
+/* BOTTOM TEXT */
+
+.bottom-text{
+    margin-top:35px;
+    text-align:center;
+}
+
+.bottom-text p{
+    color:#6c757d;
+    font-size:15px;
+    margin-bottom:10px;
+}
+
+.bottom-text a{
+    color:#0047cc;
+    text-decoration:none;
+    font-size:15px;
+}
+
+/* HEADER LOGIN */
+
+.header-login{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    margin-bottom:40px;
+}
+
+/* ICON */
+
+.icon-user i{
+    font-size:55px;
+    color:#003fa3;
+}
+
+/* TITLE CONTENT */
+
+.title-content h2{
+    font-size:52px;
+    color:#003fa3;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.title-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.title-content p{
+    font-size:17px;
+    margin-top:-5px;
+    color:#6c757d;
+}
+
+.icon-user{
+    margin-top:-35px;
+    margin-bottom:0;
+}
+
+.icon-user i{
+    font-size:55px;
+    color:#003fa3;
+}

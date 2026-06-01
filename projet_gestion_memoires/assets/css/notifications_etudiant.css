@@ -1,0 +1,669 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f4f6fb;
+    overflow:hidden;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    display:flex;
+    width:100%;
+    height:100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+
+    width:280px;
+
+    height:100vh;
+
+    background:white;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    border-right:1px solid #e5e7eb;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+
+    z-index:1000;
+}
+
+/* ================= LOGO ================= */
+
+.logo-box{
+
+    background:#0f4db8;
+
+    min-height:150px;
+
+    padding:28px 22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+}
+
+.logo{
+
+    width:75px;
+
+    flex-shrink:0;
+}
+
+.logo-box h2{
+
+    color:white;
+
+    font-size:20px;
+
+    line-height:1.3;
+
+    font-weight:700;
+}
+
+.logo-box p{
+
+    color:white;
+
+    margin-top:8px;
+
+    font-size:14px;
+
+    line-height:1.5;
+}
+
+/* ================= MENU ================= */
+
+.menu{
+
+    list-style:none;
+
+    padding:25px 18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    flex:1;
+
+    overflow-y:auto;
+}
+
+.menu li{
+
+    width:100%;
+}
+
+.menu li a{
+
+    height:58px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:#0f172a;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:0 18px;
+
+    font-size:17px;
+
+    transition:0.3s;
+}
+
+.menu li a i{
+
+    width:24px;
+
+    font-size:22px;
+}
+
+/* HOVER */
+
+.menu li a:hover{
+
+    background:#edf2ff;
+
+    color:#2563eb;
+}
+
+/* ACTIVE */
+
+.menu li.active a{
+
+    background:#2563eb;
+
+    color:white;
+}
+
+/* ================= LOGOUT ================= */
+
+.logout{
+
+    padding:18px;
+
+    border-top:1px solid #e5e7eb;
+}
+
+.logout a{
+
+    height:56px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:#dc2626;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:0 18px;
+
+    font-size:17px;
+
+    transition:0.3s;
+}
+
+.logout a:hover{
+
+    background:#fef2f2;
+}
+
+/* ================= MAIN ================= */
+
+.main{
+    flex:1;
+    margin-left:280px;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+
+    height:95px;
+
+    background:white;
+
+    border-bottom:1px solid #e5e7eb;
+
+    padding:0 35px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    flex-shrink:0;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+}
+
+/* ================= HEADER LEFT ================= */
+
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.header-left i{
+    font-size:30px;
+    color:#0f172a;
+}
+
+.header-left h1{
+    font-size:32px;
+    color:#0f172a;
+    font-weight:700;
+}
+
+/* ================= HEADER RIGHT ================= */
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+/* ================= NOTIF ================= */
+
+.header-notif{
+    position:relative;
+}
+
+.header-notif i{
+    font-size:28px;
+    color:#0f172a;
+}
+
+.header-notif span{
+    position:absolute;
+
+    top:-10px;
+    right:-10px;
+
+    width:24px;
+    height:24px;
+
+    border-radius:50%;
+
+    background:red;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:12px;
+    font-weight:700;
+}
+
+/* ================= PROFILE ================= */
+
+.profile-box{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.profile-box img{
+    width:54px;
+    height:54px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+}
+
+.profile-box h3{
+    font-size:18px;
+    color:#0f172a;
+}
+
+.profile-box p{
+    color:#64748b;
+    margin-top:4px;
+}
+
+/* ================= CONTENT ================= */
+
+.content{
+
+    flex:1;
+
+    padding:35px;
+
+    overflow-y:auto;
+
+    height:calc(100vh - 95px);
+}
+
+/* ================= TOP ================= */
+
+.content-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:30px;
+}
+
+.content-top h2{
+    font-size:52px;
+    color:#0f172a;
+}
+
+/* ================= BUTTON ================= */
+
+.read-btn{
+    height:52px;
+
+    padding:0 24px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#2563eb;
+    color:white;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* ================= TABS ================= */
+
+.tabs{
+    display:flex;
+    gap:16px;
+
+    margin-bottom:28px;
+
+    flex-wrap:wrap;
+}
+
+.tabs button{
+
+    border:none;
+
+    background:white;
+
+    height:56px;
+
+    padding:0 24px;
+
+    border-radius:14px;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+.tabs .active{
+    background:#2563eb;
+    color:white;
+}
+
+.tabs span{
+
+    width:24px;
+    height:24px;
+
+    border-radius:50%;
+
+    background:red;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:12px;
+    font-weight:700;
+}
+
+/* ================= LAYOUT ================= */
+
+.notifications-layout{
+
+    display:grid;
+
+    grid-template-columns:1fr 330px;
+
+    gap:25px;
+
+    align-items:start;
+}
+
+/* ================= LIST ================= */
+
+.notifications-list{
+
+    background:white;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    border:1px solid #e5e7eb;
+}
+
+/* ================= ITEM ================= */
+
+.notification-item{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:20px;
+
+    padding:28px;
+
+    border-bottom:1px solid #eef2f7;
+}
+
+/* ================= LEFT PART ================= */
+
+.notification-item .notif-icon{
+
+    width:74px;
+    height:74px;
+
+    border-radius:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    color:white;
+
+    font-size:28px;
+}
+
+/* COLORS */
+
+.commentaire{
+    background:#9333ea;
+}
+
+.like{
+    background:#ec4899;
+}
+
+.memoire{
+    background:#22c55e;
+}
+
+.systeme{
+    background:#f59e0b;
+}
+
+/* ================= CONTENT ================= */
+
+.notif-content{
+    flex:1;
+}
+
+.notif-content h3{
+
+    font-size:22px;
+
+    margin-bottom:8px;
+
+    color:#0f172a;
+}
+
+.notif-content p{
+
+    color:#475569;
+
+    line-height:1.7;
+
+    font-size:16px;
+}
+
+/* ================= DATE ================= */
+
+.notif-time{
+
+    color:#64748b;
+
+    font-size:14px;
+
+    white-space:nowrap;
+}
+
+/* ================= RIGHT ================= */
+
+.side-summary{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:25px;
+}
+
+/* ================= BOXES ================= */
+
+.summary-box,
+.tips-box{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    border:1px solid #e5e7eb;
+}
+
+.summary-box h3,
+.tips-box h3{
+
+    font-size:32px;
+
+    color:#0f172a;
+
+    margin-bottom:22px;
+}
+
+/* ================= SUMMARY ================= */
+
+.summary-box ul{
+    list-style:none;
+}
+
+.summary-box li{
+
+    display:flex;
+    justify-content:space-between;
+
+    margin-bottom:18px;
+
+    font-size:18px;
+}
+
+/* ================= TIPS ================= */
+
+.tips-box p{
+
+    color:#475569;
+
+    line-height:1.8;
+
+    margin-bottom:22px;
+
+    font-size:16px;
+}
+
+.tips-box button{
+
+    width:100%;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#2563eb;
+    color:white;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+    .notifications-layout{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .main{
+        margin-left:0;
+    }
+
+    .header{
+        padding:0 20px;
+    }
+
+    .content{
+        padding:20px;
+    }
+
+    .content-top{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .content-top h2{
+        font-size:36px;
+    }
+
+    .notification-item{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+}

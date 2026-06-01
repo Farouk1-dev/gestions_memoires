@@ -1,0 +1,662 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    overflow:hidden;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    display:flex;
+    width:100%;
+    height:100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+    width:280px;
+    height:100vh;
+
+    background:white;
+
+    border-right:1px solid #e5e7eb;
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    z-index:1000;
+}
+
+/* LOGO */
+
+.logo-box{
+    background:#003fa3;
+
+    min-height:110px;
+
+    padding:18px 20px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:70px;
+    object-fit:contain;
+}
+
+.logo-box h2{
+    color:white;
+    font-size:16px;
+    font-weight:700;
+    line-height:1.2;
+}
+
+.logo-box p{
+    color:white;
+    font-size:12px;
+    margin-top:4px;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.menu{
+    list-style:none;
+    padding:20px 15px;
+    flex:1;
+}
+
+.menu li{
+    margin-bottom:10px;
+}
+
+.menu li a{
+    width:100%;
+    height:56px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:0 18px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:#0f172a;
+
+    font-size:16px;
+    font-weight:500;
+
+    transition:0.2s;
+}
+
+.menu li.active a{
+    background:#eef4ff;
+    color:#0047cc;
+    font-weight:700;
+}
+
+.menu li a:hover{
+    background:#f4f7fc;
+}
+
+.menu li a i{
+    width:22px;
+    font-size:18px;
+}
+
+/* =========================
+   LOGOUT
+========================= */
+
+.logout{
+    height:80px;
+    border-top:1px solid #e5e7eb;
+}
+
+.logout a{
+    width:100%;
+    height:100%;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:0 24px;
+
+    text-decoration:none;
+
+    color:#0f172a;
+
+    font-size:16px;
+    font-weight:500;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.main{
+    margin-left:280px;
+
+    width:calc(100% - 280px);
+
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+    height:95px;
+
+    background:white;
+
+    border-bottom:1px solid #e5e7eb;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 35px;
+
+    flex-shrink:0;
+}
+
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.header-left i{
+    font-size:28px;
+}
+
+.header-left h1{
+    font-size:22px;
+    color:#0f172a;
+}
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+/* NOTIF */
+
+.notif{
+    font-size:24px;
+}
+
+/* PROFILE */
+
+.profile-box{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.profile{
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.profile-box h3{
+    font-size:16px;
+}
+
+.profile-box p{
+    font-size:14px;
+    color:#64748b;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content{
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:30px;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.page-title h2{
+    font-size:34px;
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+.page-title p{
+    color:#64748b;
+    font-size:16px;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    margin-top:30px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+}
+
+/* CARD */
+
+.stat-card{
+    background:white;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:20px;
+
+    padding:24px;
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.icon{
+    width:65px;
+    height:65px;
+
+    border-radius:18px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:26px;
+}
+
+.stat-card h4{
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.stat-card h2{
+    font-size:34px;
+    margin-bottom:5px;
+}
+
+.stat-card p{
+    color:#64748b;
+    font-size:14px;
+}
+
+/* COLORS */
+
+.blue{
+    background:#eef4ff;
+    color:#0047cc;
+}
+
+.orange{
+    background:#fff5df;
+    color:#d97706;
+}
+
+.green{
+    background:#ebfff2;
+    color:#00994d;
+}
+
+.red{
+    background:#fff0f0;
+    color:#e60000;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.table-container{
+
+    margin-top:28px;
+
+    background:white;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:22px;
+
+    overflow:visible;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+/* HEAD */
+
+thead{
+    background:#f8fbff;
+}
+
+th{
+    padding:22px 20px;
+
+    text-align:left;
+
+    font-size:15px;
+    font-weight:700;
+
+    color:#0f172a;
+}
+
+/* BODY */
+
+td{
+    padding:26px 20px;
+
+    border-top:1px solid #edf0f5;
+
+    font-size:15px;
+
+    color:#334155;
+
+    vertical-align:middle;
+}
+
+/* MEMOIRE INFO */
+
+.memoire-info{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.memoire-icon{
+    width:52px;
+    height:52px;
+
+    border-radius:14px;
+
+    background:#eef4ff;
+
+    color:#0047cc;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:22px;
+}
+
+.memoire-info h4{
+    margin-bottom:6px;
+    color:#0f172a;
+    font-size:17px;
+}
+
+.memoire-info p{
+    color:#64748b;
+    font-size:13px;
+}
+
+/* STATUS */
+
+.status{
+    padding:10px 18px;
+
+    border-radius:12px;
+
+    font-size:13px;
+    font-weight:700;
+
+    display:inline-block;
+}
+
+.orange-status{
+    background:#fff5df;
+    color:#d97706;
+}
+
+.green-status{
+    background:#ebfff2;
+    color:#00994d;
+}
+
+.red-status{
+    background:#fff0f0;
+    color:#e60000;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+table th:last-child,
+table td:last-child{
+    min-width:180px;
+}
+
+.actions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    position:relative;
+    flex-wrap:nowrap;
+}
+
+/* OEIL */
+
+.eye-btn{
+    width:50px;
+    height:50px;
+
+    border-radius:14px;
+
+    background:#f1f5f9;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:#0f172a;
+
+    font-size:18px;
+
+    transition:0.2s;
+}
+
+.eye-btn:hover{
+    background:#dbeafe;
+    color:#0047cc;
+}
+
+/* DROPDOWN */
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown-btn{
+    width:50px;
+    height:50px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#f1f5f9;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:0.2s;
+}
+
+.dropdown-btn:hover{
+    background:#dbeafe;
+    color:#0047cc;
+}
+
+/* MENU */
+
+.dropdown-content{
+
+    position:absolute;
+
+    top:60px;
+
+    right:0;
+
+    width:220px;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 12px 35px rgba(0,0,0,0.12);
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(10px);
+
+    transition:0.25s;
+
+    z-index:99999;
+}
+
+/* SHOW */
+
+.dropdown:hover .dropdown-content{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+}
+
+/* LINKS */
+
+.dropdown-content a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 22px;
+
+    text-decoration:none;
+
+    color:#0f172a;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    border-bottom:1px solid #f1f5f9;
+
+    transition:0.2s;
+}
+
+.dropdown-content a:last-child{
+    border-bottom:none;
+}
+
+.dropdown-content a:hover{
+    background:#f8fafc;
+    color:#0047cc;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.table-footer{
+    padding:22px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border-top:1px solid #edf0f5;
+}
+
+.table-footer p{
+    color:#64748b;
+}
+
+/* PAGINATION */
+
+.pagination{
+    display:flex;
+    gap:10px;
+}
+
+.pagination button{
+    width:42px;
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#f8fbff;
+
+    cursor:pointer;
+
+    font-size:15px;
+}
+
+.active-page{
+    background:#0047cc !important;
+    color:white;
+}
