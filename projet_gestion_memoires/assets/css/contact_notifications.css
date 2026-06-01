@@ -1,0 +1,471 @@
+/* ===================================
+RESET
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+/* ===================================
+CONTAINER
+=================================== */
+
+.container{
+    display:flex;
+}
+
+/* ===================================
+SIDEBAR
+=================================== */
+
+.sidebar{
+    width:300px;
+    height:100vh;
+
+    background:#fff;
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    border-right:1px solid #e5e7eb;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    overflow-y:auto;
+}
+
+/* ===================================
+LOGO
+=================================== */
+
+.logo-box{
+    background:#0d47b5;
+
+    padding:25px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:70px;
+}
+
+.logo-box h2{
+    color:#fff;
+    font-size:18px;
+    line-height:1.3;
+}
+
+.logo-box p{
+    color:#fff;
+    font-size:13px;
+    margin-top:5px;
+}
+
+/* ===================================
+MENU
+=================================== */
+
+.menu{
+    list-style:none;
+    padding:25px 15px;
+}
+
+.menu li{
+    margin-bottom:10px;
+}
+
+.menu li a{
+    height:58px;
+
+    padding:0 20px;
+
+    border-radius:16px;
+
+    display:flex;
+    align-items:center;
+    gap:16px;
+
+    text-decoration:none;
+
+    color:#08154b;
+
+    font-size:18px;
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+.menu li a i{
+    font-size:20px;
+}
+
+.menu li.active a{
+    background:#eef3ff;
+    color:#1746d1;
+}
+
+.menu li a:hover{
+    background:#f3f4f6;
+}
+
+/* ===================================
+LOGOUT
+=================================== */
+
+.logout{
+    padding:20px;
+    border-top:1px solid #e5e7eb;
+}
+
+.logout a{
+    text-decoration:none;
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    color:#08154b;
+
+    font-size:18px;
+    font-weight:500;
+}
+
+/* ===================================
+MAIN
+=================================== */
+
+.main{
+    margin-left:300px;
+    width:calc(100% - 300px);
+}
+
+/* ===================================
+HEADER
+=================================== */
+
+.header{
+    height:95px;
+
+    background:#fff;
+
+    padding:0 35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    border-bottom:1px solid #e5e7eb;
+}
+
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.menu-btn{
+    font-size:30px;
+    color:#08154b;
+}
+
+.page-title{
+    font-size:24px;
+    color:#08154b;
+    font-weight:700;
+}
+
+/* ===================================
+HEADER RIGHT
+=================================== */
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.notification{
+    position:relative;
+    font-size:28px;
+    color:#08154b;
+}
+
+.badge{
+    position:absolute;
+    top:-8px;
+    right:-8px;
+
+    width:22px;
+    height:22px;
+
+    border-radius:50%;
+
+    background:red;
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:12px;
+}
+
+.admin-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.admin-avatar{
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+
+    background:#eef2ff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:26px;
+    color:#08154b;
+}
+
+.admin-info h3{
+    font-size:20px;
+    color:#08154b;
+}
+
+.admin-info p{
+    color:#6b7280;
+    margin-top:3px;
+}
+
+/* ===================================
+CONTENT
+=================================== */
+
+.content{
+    padding:35px;
+}
+
+/* ===================================
+TOP BAR
+=================================== */
+
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:30px;
+}
+
+.top-bar h1{
+    font-size:42px;
+    color:#08154b;
+    margin-bottom:8px;
+}
+
+.top-bar p{
+    color:#6b7280;
+    font-size:18px;
+}
+
+/* ===================================
+BUTTON
+=================================== */
+
+.refresh-btn{
+    height:50px;
+
+    padding:0 22px;
+
+    border:1px solid #dbe1ea;
+
+    border-radius:14px;
+
+    background:#fff;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    text-decoration:none;
+
+    color:#08154b;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.refresh-btn:hover{
+    background:#f3f4f6;
+}
+
+/* ===================================
+MESSAGES
+=================================== */
+
+.messages-list{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+/* ===================================
+CARD
+=================================== */
+
+.message-card{
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    border:1px solid #edf0f5;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+/* ===================================
+LEFT
+=================================== */
+
+.card-left{
+    display:flex;
+    gap:22px;
+}
+
+.avatar{
+    width:72px;
+    height:72px;
+
+    border-radius:50%;
+
+    background:#eef3ff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#1746d1;
+
+    font-size:30px;
+}
+
+.message-info h3{
+    font-size:20px;
+    color:#08154b;
+    margin-bottom:6px;
+}
+
+.email{
+    color:#1746d1;
+    margin-bottom:12px;
+}
+
+.subject{
+    font-size:18px;
+    font-weight:700;
+    color:#08154b;
+
+    margin-bottom:12px;
+}
+
+.message-text{
+    font-size:17px;
+    color:#4b5563;
+    line-height:1.7;
+}
+
+/* ===================================
+RIGHT
+=================================== */
+
+.card-right{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:30px;
+}
+
+.date{
+    color:#6b7280;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-size:16px;
+}
+
+/* ===================================
+DELETE
+=================================== */
+
+.delete-btn{
+    width:150px;
+    height:52px;
+
+    border-radius:14px;
+
+    border:1px solid #ff4d4f;
+
+    background:#fff;
+
+    color:#ff4d4f;
+
+    text-decoration:none;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    font-size:18px;
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.delete-btn:hover{
+    background:#ff4d4f;
+    color:#fff;
+}
+
+/* ===================================
+EMPTY
+=================================== */
+
+.empty-box{
+    background:#fff;
+
+    padding:70px 20px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    color:#6b7280;
+
+    font-size:20px;
+}
