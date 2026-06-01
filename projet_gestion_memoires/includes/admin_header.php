@@ -159,7 +159,7 @@
         echo 'active';
         ?>">
 
-            <a href="profile.php">
+            <!-- <a href="profile.php">
 
                 <i class="fa-regular fa-user"></i>
 
@@ -167,7 +167,7 @@
                     Profil
                 </span>
 
-            </a>
+            </a>-->
 
         </li>
 
